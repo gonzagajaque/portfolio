@@ -1,13 +1,10 @@
-import type { Metadata } from 'next'
+'use client'
+
 import { Section } from '@/components/ui/Section'
 import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
 import Link from 'next/link'
-
-export const metadata: Metadata = {
-  title: 'Writing - Jaqueline Gonzaga',
-  description: 'Artigos e posts sobre desenvolvimento mobile e acessibilidade.',
-}
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const articles = [
   {
@@ -40,16 +37,18 @@ const articles = [
 ]
 
 export default function WritingPage() {
+  const { t, locale } = useLanguage()
+  
   return (
     <>
       <Section id="writing-hero" className="pt-24">
         <Container>
           <div className="max-w-4xl mx-auto mb-16">
             <h1 className="text-5xl md:text-6xl font-bold mb-8 text-neutral-900 dark:text-white">
-              Writing.
+              {t('writing.title')}
             </h1>
             <p className="text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              Articles and posts about mobile development, accessibility, and building inclusive digital experiences.
+              {t('writing.description')}
             </p>
           </div>
 
@@ -76,7 +75,7 @@ export default function WritingPage() {
                     <span>{article.category}</span>
                     <span>•</span>
                     <time dateTime={article.date}>
-                      {new Date(article.date).toLocaleDateString('pt-BR', {
+                      {new Date(article.date).toLocaleDateString(locale === 'en' ? 'en-US' : locale === 'pt' ? 'pt-BR' : 'es-ES', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric',
@@ -90,16 +89,16 @@ export default function WritingPage() {
 
           <div className="mt-16 text-center">
             <p className="text-lg text-neutral-600 dark:text-neutral-400">
-              More articles coming soon. Visit my{' '}
+              {t('writing.moreArticles')}{' '}
               <Link
                 href="https://accessibilityfordevs.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 dark:text-primary-400 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
               >
-                blog
+                {t('writing.blog')}
               </Link>{' '}
-              for more content.
+              {t('writing.forMore')}
             </p>
           </div>
         </Container>

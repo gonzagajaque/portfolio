@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Timeline } from '@/components/features/Timeline'
 
 export const metadata: Metadata = {
-  title: 'Experiência - Jaqueline Gonzaga',
-  description: 'Experiência profissional e projetos de Jaqueline Gonzaga.',
+  title: 'Experience - Jaqueline Gonzaga',
+  description: 'Professional experience and projects of Jaqueline Gonzaga.',
 }
 
 export default function ExperiencePage() {
