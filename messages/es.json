@@ -1,0 +1,114 @@
+{
+  "common": {
+    "nav": {
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "resume": "Currículum",
+      "about": "Sobre",
+      "contact": "Contacto"
+    },
+    "buttons": {
+      "download": "Descargar",
+      "send": "Enviar",
+      "back": "Volver a la página anterior",
+      "viewProject": "Ver Proyecto",
+      "openInNewTab": "Abre en nueva pestaña",
+      "toggleTheme": "Alternar tema",
+      "switchToLight": "Cambiar a tema claro",
+      "switchToDark": "Cambiar a tema oscuro",
+      "loadingTheme": "Cargando tema...",
+      "darkThemeActive": "Tema oscuro activo",
+      "lightThemeActive": "Tema claro activo"
+    },
+    "labels": {
+      "location": "Ubicación",
+      "languages": "Idiomas",
+      "education": "Educación",
+      "contact": "Contacto",
+      "email": "Email",
+      "phone": "Teléfono",
+      "social": "Redes Sociales"
+    }
+  },
+  "hero": {
+    "greeting": "¡Hola, soy Jaqueline Gonzaga!",
+    "title": "Portafolio",
+    "chatPlaceholder": "Pregúntame lo que quieras…",
+    "chatSubmit": "Enviar mensaje",
+    "chatInputLabel": "Campo de entrada del chat"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description1": "Senior Mobile Developer con más de 6 años de experiencia construyendo aplicaciones accesibles, escalables y de alto rendimiento para Android e iOS, especializada en React Native y arquitecturas frontend modernas. Diseño e implemento flujos móviles robustos con prácticas a11y-first, garantizando experiencias compatibles con WCAG validadas a través de TalkBack, VoiceOver y auditorías de accesibilidad end-to-end.",
+    "description2": "Experta en arquitectura modular de apps, almacenamiento seguro, patrones offline-first y optimización de rendimiento en sistemas de diseño complejos y entornos multi-marca. Hábil en React Native, TypeScript, React, Redux/Zustand, GraphQL, REST, Jest/React Testing Library, Maestro E2E, pipelines CI/CD (GitHub Actions, GitLab CI, Fastlane) y herramientas de observabilidad.",
+    "description3": "Colaboro estrechamente con producto, diseño, QA y ciberseguridad para construir codebases mantenibles, fundamentos de UI escalables y pipelines de release confiables. Hábil en diagnosticar inconsistencias de lectores de pantalla, resolver problemas de gestión de foco, implementar bibliotecas de componentes semánticos e impulsar mejoras de accesibilidad que impactan a millones de usuarios globalmente.",
+    "description4": "Tengo experiencia en diversos dominios incluyendo healthcare (citas, beneficios, carteras), fintech/cartera digital, logística (flujos de camiones, ciclo de vida de carga), agritech (gestión hidropónica), retail (e-commerce multilingüe) y dashboards de inversión/inmobiliario. Mi enfoque combina experiencia técnica con foco en accesibilidad, seguridad y experiencia de usuario.",
+    "location": "Brasil",
+    "languages": "Portugués (nativo), Inglés (avanzado), Español (avanzado)",
+    "education1": "Licenciatura en Ciencia y Tecnología (B.Sc.) - UFMT",
+    "education1Period": "2023-2026 (en progreso)",
+    "education2": "Licenciatura en Ingeniería Química - UFMT",
+    "education2Period": "2017-2023"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "about": "Sobre el Proyecto",
+    "highlights": "Destacados",
+    "technologies": "Tecnologías y Herramientas",
+    "links": "Enlaces",
+    "appStore": "App Store",
+    "playStore": "Play Store",
+    "website": "Sitio Web",
+    "viewProject": "Ver proyecto",
+    "openAppStore": "Abrir en App Store",
+    "openPlayStore": "Abrir en Play Store",
+    "openWebsite": "Abrir sitio web"
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "contact": {
+    "title": "Contacto",
+    "visit": "Visitar"
+  },
+  "resume": {
+    "title": "Currículum",
+    "description": "Descarga mi currículum en PDF para conocer más sobre mi experiencia profesional, habilidades técnicas y formación académica.",
+    "download": "Descargar Currículum"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "description": "Mi trayectoria profesional en desarrollo móvil y accesibilidad."
+  },
+  "writing": {
+    "title": "Escritura.",
+    "description": "Artículos y publicaciones sobre desarrollo móvil, accesibilidad y construcción de experiencias digitales inclusivas.",
+    "moreArticles": "Más artículos próximamente. Visita mi",
+    "blog": "blog",
+    "forMore": "para más contenido."
+  },
+  "speaking": {
+    "title": "Charlas.",
+    "description": "Hablo en conferencias y meetups sobre desarrollo móvil, accesibilidad y construcción de experiencias digitales inclusivas. Consulta mis próximas charlas y presentaciones pasadas.",
+    "talk": "charla",
+    "workshop": "taller",
+    "interested": "¿Interesado en que hable?",
+    "interestedDescription": "Siempre estoy abierta a hablar en conferencias, meetups y talleres. ¡No dudes en contactarme!",
+    "getInTouch": "Ponerse en contacto →"
+  },
+  "fun": {
+    "title": "Diversión",
+    "description": "Próximamente, contenido sobre hobbies e intereses personales."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Página no encontrada",
+    "backToProjects": "Volver a proyectos"
+  },
+  "skipToContent": "Saltar al contenido principal",
+  "periods": {
+    "present": "Presente",
+    "may2025": "Mayo 2025"
+  }
+}
+

@@ -1,0 +1,114 @@
+{
+  "common": {
+    "nav": {
+      "projects": "Projects",
+      "skills": "Skills",
+      "resume": "Resume",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "buttons": {
+      "download": "Download",
+      "send": "Send",
+      "back": "Back to previous page",
+      "viewProject": "View Project",
+      "openInNewTab": "Opens in new tab",
+      "toggleTheme": "Toggle theme",
+      "switchToLight": "Switch to light theme",
+      "switchToDark": "Switch to dark theme",
+      "loadingTheme": "Loading theme...",
+      "darkThemeActive": "Dark theme active",
+      "lightThemeActive": "Light theme active"
+    },
+    "labels": {
+      "location": "Location",
+      "languages": "Languages",
+      "education": "Education",
+      "contact": "Contact",
+      "email": "Email",
+      "phone": "Phone",
+      "social": "Social"
+    }
+  },
+  "hero": {
+    "greeting": "Hey, I'm Jaqueline Gonzaga!",
+    "title": "Portfolio",
+    "chatPlaceholder": "Ask me anything…",
+    "chatSubmit": "Send message",
+    "chatInputLabel": "Chat input field"
+  },
+  "about": {
+    "title": "Me",
+    "description1": "Senior Mobile Developer with 6+ years of experience building accessible, scalable, and high-performance applications for Android and iOS, specialized in React Native and modern frontend architectures. I design and implement robust mobile flows with a11y-first practices, ensuring WCAG-compliant experiences validated through TalkBack, VoiceOver, and end-to-end accessibility audits.",
+    "description2": "Experienced in modular app architecture, secure storage, offline-first patterns, and performance optimization in complex design systems and multi-brand environments. Skilled in React Native, TypeScript, React, Redux/Zustand, GraphQL, REST, Jest/React Testing Library, Maestro E2E, CI/CD pipelines (GitHub Actions, GitLab CI, Fastlane), and observability tools.",
+    "description3": "I collaborate closely with product, design, QA, and cybersecurity teams to build maintainable codebases, scalable UI foundations, and reliable release pipelines. Skilled in diagnosing screen reader inconsistencies, resolving focus management issues, implementing semantic component libraries, and driving accessibility improvements that impact millions of users globally.",
+    "description4": "I have experience across various domains including healthcare (appointments, benefits, wallets), fintech/digital wallet, logistics (truck flows, freight lifecycle), agritech (hydroponic management), retail (multilingual e-commerce), and investment/real estate dashboards. My approach combines technical expertise with a focus on accessibility, security, and user experience.",
+    "location": "Brazil",
+    "languages": "Portuguese (native), English (advanced), Spanish (advanced)",
+    "education1": "Bachelor of Science & Technology (B.Sc.) - UFMT",
+    "education1Period": "2023-2026 (in progress)",
+    "education2": "Bachelor of Chemical Engineering - UFMT",
+    "education2Period": "2017-2023"
+  },
+  "projects": {
+    "title": "Projects",
+    "about": "About the Project",
+    "highlights": "Highlights",
+    "technologies": "Technologies and Tools",
+    "links": "Links",
+    "appStore": "App Store",
+    "playStore": "Play Store",
+    "website": "Website",
+    "viewProject": "View project",
+    "openAppStore": "Open in App Store",
+    "openPlayStore": "Open in Play Store",
+    "openWebsite": "Open website"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "contact": {
+    "title": "Contact",
+    "visit": "Visit"
+  },
+  "resume": {
+    "title": "Resume",
+    "description": "Download my resume in PDF to learn more about my professional experience, technical skills, and academic background.",
+    "download": "Download Resume"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "description": "My professional journey in mobile development and accessibility."
+  },
+  "writing": {
+    "title": "Writing.",
+    "description": "Articles and posts about mobile development, accessibility, and building inclusive digital experiences.",
+    "moreArticles": "More articles coming soon. Visit my",
+    "blog": "blog",
+    "forMore": "for more content."
+  },
+  "speaking": {
+    "title": "Speaking.",
+    "description": "I speak at conferences and meetups about mobile development, accessibility, and building inclusive digital experiences. Check out my upcoming talks and past presentations.",
+    "talk": "talk",
+    "workshop": "workshop",
+    "interested": "Interested in having me speak?",
+    "interestedDescription": "I'm always open to speaking at conferences, meetups, and workshops. Feel free to reach out!",
+    "getInTouch": "Get in touch →"
+  },
+  "fun": {
+    "title": "Fun",
+    "description": "Coming soon, content about hobbies and personal interests."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Page not found",
+    "backToProjects": "Back to projects"
+  },
+  "skipToContent": "Skip to main content",
+  "periods": {
+    "present": "Present",
+    "may2025": "May 2025"
+  }
+}
+
