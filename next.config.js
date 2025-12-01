@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/portfolio',
+  // Only apply basePath in production/build, not in development
+  ...(process.env.NODE_ENV !== 'development' && { basePath: '/portfolio' }),
   trailingSlash: true,
   images: {
     unoptimized: true,
