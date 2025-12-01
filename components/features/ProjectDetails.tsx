@@ -101,7 +101,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                       href={translatedProject.iosUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                       aria-label={t('projects.openAppStore')}
                     >
                       <AppleIcon size={20} />
@@ -114,7 +114,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                       href={translatedProject.androidUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                       aria-label={t('projects.openPlayStore')}
                     >
                       <AndroidIcon size={20} />
@@ -127,7 +127,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                       href={translatedProject.webUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                       aria-label={t('projects.openWebsite')}
                     >
                       <Globe size={20} />
@@ -140,7 +140,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                       href={translatedProject.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                       aria-label={t('projects.viewProject')}
                     >
                       <Globe size={20} />
