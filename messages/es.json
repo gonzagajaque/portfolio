@@ -36,7 +36,13 @@
     "title": "Portafolio",
     "chatPlaceholder": "Pregúntame lo que quieras…",
     "chatSubmit": "Enviar mensaje",
-    "chatInputLabel": "Campo de entrada del chat"
+    "chatInputLabel": "Campo de entrada del chat",
+    "chatTitle": "Chat",
+    "closeChat": "Cerrar chat",
+    "chatError": "Lo siento, ocurrió un error. Por favor, intenta de nuevo.",
+    "chatWelcome": "¡Hola! Soy Jaqueline Gonzaga, Senior Mobile Developer especializada en React Native y accesibilidad. ¡Pregúntame sobre mis experiencias, proyectos, tecnologías o accesibilidad!",
+    "chatSubtitle": "Pregúntame sobre mi experiencia profesional",
+    "clearChat": "Limpiar conversación"
   },
   "about": {
     "title": "Sobre Mí",
