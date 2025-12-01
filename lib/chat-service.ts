@@ -41,7 +41,7 @@ const keywordMap: Record<string, string[]> = {
 }
 
 // Response templates in different languages
-const responseTemplates: Record<Locale, Record<string, (data: any) => string>> = {
+const responseTemplates: Record<Locale, Record<string, (data?: any) => string>> = {
   pt: {
     greeting: () => 'Olá! Sou Jaqueline Gonzaga, Senior Mobile Developer especializada em React Native e acessibilidade. Como posso ajudar?',
     
@@ -187,7 +187,7 @@ function searchData(query: string): {
   const lowerQuery = query.toLowerCase()
   const foundProjects: typeof projects = []
   const foundExperiences: typeof experiences = []
-  const foundTechnologies: string[] = new Set()
+  const foundTechnologies = new Set<string>()
   
   // Split query into words for better matching
   const queryWords = lowerQuery.split(/\s+/).filter(w => w.length > 2)
