@@ -1,19 +1,25 @@
+'use client'
+
 import React from 'react'
 import { Container } from '../ui/Container'
 import { Section } from '../ui/Section'
 import { TimelineItem } from './TimelineItem'
-import { experiences } from '@/lib/data'
+import { getTranslatedExperiences } from '@/lib/data-i18n'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export const Timeline: React.FC = () => {
+  const { t, locale } = useLanguage()
+  const experiences = getTranslatedExperiences(locale)
+  
   return (
-    <Section id="experience-timeline" ariaLabel="Linha do tempo de experiências" ariaLabelledBy="experience-timeline-title">
+    <Section id="experience-timeline" ariaLabel={t('experience.title')} ariaLabelledBy="experience-timeline-title">
       <Container>
         <div className="text-center mb-12">
           <h2 id="experience-timeline-title" className="text-3xl md:text-4xl font-bold mb-4 text-neutral-900 dark:text-white">
-            Experiência Profissional
+            {t('experience.title')}
           </h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-            Minha jornada profissional em desenvolvimento mobile e acessibilidade.
+            {t('experience.description')}
           </p>
         </div>
 
