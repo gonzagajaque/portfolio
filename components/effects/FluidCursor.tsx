@@ -276,7 +276,7 @@ export const FluidCursor: React.FC = () => {
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-[1]"
       style={{
         mixBlendMode: 'normal',
-        opacity: 0.3,
+        opacity: 0.03,
       }}
       aria-hidden="true"
     />
