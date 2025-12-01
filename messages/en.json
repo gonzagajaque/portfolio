@@ -10,6 +10,7 @@
     "buttons": {
       "download": "Download",
       "send": "Send",
+      "cancel": "Cancel",
       "back": "Back to previous page",
       "viewProject": "View Project",
       "openInNewTab": "Opens in new tab",
@@ -74,7 +75,9 @@
   "resume": {
     "title": "Resume",
     "description": "Download my resume in PDF to learn more about my professional experience, technical skills, and academic background.",
-    "download": "Download Resume"
+    "download": "Download Resume",
+    "downloadConfirm": "Download Resume?",
+    "downloadMessage": "Do you want to download the resume in PDF?"
   },
   "experience": {
     "title": "Professional Experience",

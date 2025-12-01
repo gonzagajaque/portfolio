@@ -10,6 +10,7 @@
     "buttons": {
       "download": "Descargar",
       "send": "Enviar",
+      "cancel": "Cancelar",
       "back": "Volver a la página anterior",
       "viewProject": "Ver Proyecto",
       "openInNewTab": "Abre en nueva pestaña",
@@ -74,7 +75,9 @@
   "resume": {
     "title": "Currículum",
     "description": "Descarga mi currículum en PDF para conocer más sobre mi experiencia profesional, habilidades técnicas y formación académica.",
-    "download": "Descargar Currículum"
+    "download": "Descargar Currículum",
+    "downloadConfirm": "¿Descargar Currículum?",
+    "downloadMessage": "¿Deseas descargar el currículum en PDF?"
   },
   "experience": {
     "title": "Experiencia Profesional",
