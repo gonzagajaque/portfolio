@@ -14,11 +14,11 @@ export const Hero: React.FC = () => {
   const basePath = process.env.NODE_ENV === 'development' ? '' : '/portfolio'
 
   const navigationButtons = [
-    { nameKey: 'common.nav.projects', href: '/projects', color: '#2563eb', icon: BriefcaseBusiness },
-    { nameKey: 'common.nav.skills', href: '/skills', color: '#3b82f6', icon: Layers },
-    { nameKey: 'common.nav.resume', href: '/resume', color: '#6b21a8', icon: Download },
-    { nameKey: 'common.nav.about', href: '/about', color: '#1d4ed8', icon: User },
-    { nameKey: 'common.nav.contact', href: '/contact', color: '#7e22ce', icon: Mail },
+    { nameKey: 'common.nav.projects', href: '/projects', icon: BriefcaseBusiness },
+    { nameKey: 'common.nav.skills', href: '/skills', icon: Layers },
+    { nameKey: 'common.nav.resume', href: '/resume', icon: Download },
+    { nameKey: 'common.nav.about', href: '/about', icon: User },
+    { nameKey: 'common.nav.contact', href: '/contact', icon: Mail },
   ]
 
   const handleChatSubmit = (e: FormEvent) => {
@@ -103,7 +103,7 @@ export const Hero: React.FC = () => {
           className="mb-4 flex items-center gap-3 max-w-lg mx-auto w-full"
           variants={itemVariants}
         >
-          <div className="flex items-center rounded-full border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 py-2.5 pr-2 pl-6 backdrop-blur-lg transition-all hover:border-neutral-300 dark:hover:border-neutral-500 w-full">
+          <div className="flex items-center rounded-full border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 py-2.5 pr-2 pl-6 backdrop-blur-lg transition-all hover:border-neutral-300 dark:hover:border-neutral-500 w-full">
             <input
               type="text"
               value={chatInput}
@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
             <button
               type="submit"
               disabled={!chatInput.trim()}
-              className="flex items-center justify-center rounded-full bg-primary-600 p-2.5 text-white transition-colors hover:bg-primary-700 disabled:opacity-70 dark:bg-primary-600 dark:hover:bg-primary-500"
+              className="flex items-center justify-center rounded-full bg-primary-500 p-2.5 text-white transition-colors hover:bg-primary-600 disabled:opacity-70 dark:bg-primary-600 dark:hover:bg-primary-500"
               aria-label={t('hero.chatSubmit')}
             >
               <svg
@@ -146,9 +146,9 @@ export const Hero: React.FC = () => {
               <Link
                 key={button.nameKey}
                 href={button.href}
-                className="cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 w-32 h-32 shadow-none backdrop-blur-lg hover:bg-neutral-200/30 dark:hover:bg-neutral-700/50 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 text-gray-700 dark:text-gray-200"
+                className="cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 w-32 h-32 shadow-none backdrop-blur-lg hover:bg-white/60 dark:hover:bg-neutral-700/50 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 text-gray-700 dark:text-gray-200"
               >
-                <Icon size={24} strokeWidth={2} color={button.color} />
+                <Icon size={24} strokeWidth={2} className="text-primary-600 dark:text-primary-400" />
                 <span className="text-xs font-medium">{t(button.nameKey)}</span>
               </Link>
             )
