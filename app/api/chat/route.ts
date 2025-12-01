@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
   }
 
   // Fallback function to use local search
-  const useLocalSearch = () => {
+  const getLocalSearchResponse = () => {
     const localResponse = processChatMessage(message, locale as Locale)
     return NextResponse.json({ answer: localResponse.answer })
   }
@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
 
     if (!apiKey) {
       // No API key, use local search
-      return useLocalSearch()
+      return getLocalSearchResponse()
     }
 
     const systemContext = createPortfolioContext(locale)
@@ -116,12 +116,12 @@ export async function POST(request: NextRequest) {
       // If quota exceeded or API error, fallback to local search
       if (errorMessage.includes('quota') || errorMessage.includes('billing') || errorMessage.includes('exceeded')) {
         console.warn('OpenAI API quota exceeded, falling back to local search')
-        return useLocalSearch()
+        return getLocalSearchResponse()
       }
       
       // For other errors, also fallback to local search
       console.warn('OpenAI API error, falling back to local search:', errorMessage)
-      return useLocalSearch()
+      return getLocalSearchResponse()
     }
 
     const data = await response.json()
@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
     console.error('Chat API error:', error)
     
     // Fallback to local search service on any error
-    return useLocalSearch()
+    return getLocalSearchResponse()
   }
 }
 
