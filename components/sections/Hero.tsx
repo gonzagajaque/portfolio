@@ -7,14 +7,11 @@ import Image from 'next/image'
 import { BriefcaseBusiness, Layers, Download, User, Mail } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-// Base path for GitHub Pages - matches next.config.js
-// Next.js should handle basePath automatically, but with static export it may not work
-// So we include it explicitly to ensure it works on GitHub Pages
-const BASE_PATH = '/portfolio'
-
 export const Hero: React.FC = () => {
   const { t } = useLanguage()
   const [chatInput, setChatInput] = useState('')
+  
+  const basePath = process.env.NODE_ENV === 'development' ? '' : '/portfolio'
 
   const navigationButtons = [
     { nameKey: 'common.nav.projects', href: '/projects', color: '#2563eb', icon: BriefcaseBusiness },
@@ -91,7 +88,7 @@ export const Hero: React.FC = () => {
         >
           <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-neutral-200 dark:border-neutral-700 shadow-2xl dark:shadow-primary-500/20 overflow-hidden">
             <Image
-              src={`${BASE_PATH}/styles/me.png`}
+              src={`${basePath}/styles/me.png`}
               alt="gonzagajaque"
               width={192}
               height={192}
