@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Fira_Code } from 'next/font/google'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 import { Header } from '@/components/layout/Header'
 import { SkipToContent } from '@/components/layout/SkipToContent'
 import { FluidCursor } from '@/components/effects/FluidCursor'
@@ -22,7 +23,7 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: 'Jaqueline Gonzaga - Senior Mobile Developer & Accessibility Specialist',
   description:
-    'Senior Mobile Developer com 6+ anos de experiência construindo aplicações acessíveis, escaláveis e de alta performance para Android e iOS, especializada em React Native e acessibilidade (WCAG 2.1).',
+    'Senior Mobile Developer with 6+ years of experience building accessible, scalable, and high-performance applications for Android and iOS, specialized in React Native and accessibility (WCAG 2.1).',
   keywords: [
     'Mobile Developer',
     'React Native',
@@ -37,18 +38,18 @@ export const metadata: Metadata = {
   creator: 'Jaqueline Gonzaga',
   openGraph: {
     type: 'website',
-    locale: 'pt_BR',
+    locale: 'en_US',
     url: 'https://jaquelinegonzaga.dev',
     title: 'Jaqueline Gonzaga - Senior Mobile Developer & Accessibility Specialist',
     description:
-      'Senior Mobile Developer com 6+ anos de experiência em React Native e acessibilidade.',
+      'Senior Mobile Developer with 6+ years of experience in React Native and accessibility.',
     siteName: 'Jaqueline Gonzaga Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Jaqueline Gonzaga - Senior Mobile Developer & Accessibility Specialist',
     description:
-      'Senior Mobile Developer com 6+ anos de experiência em React Native e acessibilidade.',
+      'Senior Mobile Developer with 6+ years of experience in React Native and accessibility.',
   },
   robots: {
     index: true,
@@ -62,16 +63,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${firaCode.variable} font-sans antialiased`}>
-        <ThemeProvider>
-          <FluidCursor />
-          <SkipToContent />
-          <Header />
-          <main id="main-content" role="main" tabIndex={-1} className="relative z-10">
-            {children}
-          </main>
-        </ThemeProvider>
+        <LanguageProvider>
+          <ThemeProvider>
+            <FluidCursor />
+            <SkipToContent />
+            <Header />
+            <main id="main-content" role="main" tabIndex={-1} className="relative z-10">
+              {children}
+            </main>
+          </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   )
