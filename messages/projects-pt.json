@@ -1,0 +1,160 @@
+{
+  "enor-securities": {
+    "description": "Construí e mantive a carteira cripto nacional baseada em El Salvador, focada em onboarding seguro, operações de carteira, validação de identidade, e fluxos multilíngues para usuários internacionais. Mantenho e evoluo toda a arquitetura v2 com foco em segurança, confiabilidade e internacionalização. Lidei arquitetura v2 com autenticação mais forte, hardening de API, obfuscação, e revisões estáticas baseadas em JADX. Entreguei fluxos multilíngues (ES/PT/EN), estabilizei UX transacional, fortaleci pipelines GitLab CI, e melhorei documentação e processos de engenharia em toda a equipe.",
+    "highlights": [
+      "Carteira cripto nacional (El Salvador)",
+      "Arquitetura v2 com segurança reforçada",
+      "Fluxos multilíngues (ES/PT/EN)",
+      "Revisões estáticas de segurança",
+      "Melhorias em processos de engenharia"
+    ]
+  },
+  "gympass-wellhub": {
+    "description": "Transformei um app multiregional usado por mais de 20 milhões de usuários em um produto totalmente alinhado com WCAG 2.1. Minha atuação focou em engenharia de acessibilidade cross-platform, onde construí componentes a11y-first para o Yoga Design System (open-source) e Yoga Inner, resolvendo inconsistências profundas entre TalkBack e VoiceOver que impactavam a experiência de usuários com deficiência visual em 11 países. Implementei correções estruturais na navegação semântica, gerenciamento de foco, anúncios dinâmicos de conteúdo e validação de árvore de leitores de tela. Fortaleci a cultura de desenvolvimento através de orientação arquitetural, padrões reutilizáveis e validação a11y automatizada em pipelines CI/CD, garantindo que todas as novas features sigam padrões de acessibilidade desde o início. Conduzi workshops técnicos para equipes de desenvolvimento, design e produto, estabelecendo práticas de acessibilidade como parte fundamental do processo de desenvolvimento.",
+    "highlights": [
+      "App usado por 20M+ usuários em 11 países",
+      "Componentes a11y-first para design system open-source (Yoga DS)",
+      "Workshops e cultura de acessibilidade organizacional",
+      "Validação a11y automatizada em CI/CD",
+      "Resolução de inconsistências TalkBack/VoiceOver",
+      "Navegação semântica e gerenciamento de foco implementados"
+    ]
+  },
+  "maistodos": {
+    "description": "Trabalhei em um dos maiores apps nacionais do Brasil, usado por milhões de usuários, oferecendo uma extensa suíte de serviços incluindo agendamento médico, benefícios de saúde, cashback, carteira digital, escaneamento de código de barras para recibos fiscais, serviços baseados em geolocalização, gestão de saldo e transferências internas. Além da entrega de features, desempenhei papel crítico liderando e evangelizando engenharia de acessibilidade em toda a organização. Conduzi workshops de acessibilidade, apoiei UX Research, orientei Product em padrões de UX inclusivos, colaborei com design para redefinir comportamentos visuais, e ajudei squads de engenharia a adotar padrões baseados em WCAG como parte de sua cultura de desenvolvimento. Fui diretamente envolvida no planejamento e modelagem da versão V4 do app, redesenhando a UI para ser mais moderna, acessível e visualmente consistente, enquanto também implementava melhorias significativas de segurança em parceria com o backend, como padrões de criptografia, ofuscação de código e fluxos mais seguros de autenticação/autorização. O trabalho incluiu otimização de performance, refatoração de fluxos legados, e manutenção de comunicação robusta com backend, UX, QA e product teams.",
+    "highlights": [
+      "App usado por milhões de usuários no Brasil",
+      "Liderança em cultura de acessibilidade organizacional",
+      "Redesign V4 com segurança reforçada",
+      "Workshops e evangelização a11y",
+      "Melhorias de segurança em colaboração com backend",
+      "Integração de múltiplos serviços (saúde, financeiro, geolocalização)"
+    ]
+  },
+  "liberali": {
+    "description": "Entreguei app React Native + Expo usado em grandes fazendas em Mato Grosso, onde conectividade de internet é extremamente limitada. O app permitiu trabalhadores registrar atividades diárias, uso de equipamentos, eventos de manutenção, conclusão de tarefas e rotinas operacionais totalmente offline, sincronizando dados uma vez que qualquer conexão estável fosse detectada. Projetei e implementei arquitetura offline-first centrada em SQLite, habilitando persistência local robusta, segurança transacional, sincronização baseada em fila, e estratégias de resolução de conflitos essenciais para fluxos de trabalho agrícolas do mundo real. O produto precisava funcionar em vastas áreas rurais, frequentemente sem 3G/4G, significando que o app tinha que armazenar dias de dados, gerenciar formulários complexos, e serializar logs de equipamentos de forma confiável.",
+    "highlights": [
+      "Arquitetura offline-first com SQLite",
+      "Sincronização em background com resolução de conflitos",
+      "Funcionamento em ambientes de baixa conectividade",
+      "Armazenamento de dias de dados offline"
+    ]
+  },
+  "osiris-agtech": {
+    "description": "Contribuí end-to-end para desenvolvimento de aplicativo híbrido mobile para gestão de cultivo hidropônico, usado por produtores agrícolas para monitorar, ajustar e otimizar soluções de nutrientes hidropônicos, ciclos de irrigação, equipamentos e rotinas diárias de cuidado com plantas. Meu trabalho abrangeu todo o ciclo de vida do produto: ajudei a projetar o protótipo, defini regras de negócio com pesquisadores de agritech, estruturei planejamento de sprints, construí layouts iniciais no Figma, e implementei toda a aplicação Flutter. Isso incluiu mapear fluxos de trabalho agrícolas reais, traduzir requisitos específicos de hidroponia em UI funcional, e moldar a arquitetura do app para suportar produtores com diferentes níveis de alfabetização técnica. Construí telas para medições de soluções, balanço de nutrientes, eventos de irrigação, inputs baseados em sensores, logs de crescimento de plantas e interações com equipamentos. Implementei cálculos de nutrientes, lógica de ciclos de irrigação, validação de dados de campo e transformação de regras de domínio. Também apoiei pipelines de deploy, publicando builds na Play Store e App Store, e integrando Firebase (autenticação, database, analytics) e APIs backend. Este projeto exigiu colaboração constante com agrônomos e equipe de pesquisa para garantir que o app correspondesse a práticas hidropônicas reais usadas no campo, incluindo testes em ambientes reais de cultivo.",
+    "highlights": [
+      "Desenvolvimento end-to-end completo (design a deploy)",
+      "Protótipos e design no Figma",
+      "Colaboração com agrônomos e pesquisadores",
+      "Mapeamento de fluxos de trabalho agrícolas reais",
+      "Deploy em Play Store e App Store",
+      "Integração com sensores e equipamentos agrícolas",
+      "Cálculos de nutrientes e ciclos de irrigação"
+    ]
+  },
+  "trinus": {
+    "description": "Melhorei plataforma mobile de grande escala de imóveis e investimentos com carteira digital, rastreamento de ativos, monitoramento de construção, e fluxos de documentos legais. Entreguei componentes de UI financeira estáveis, otimizei integrações backend, melhorei renderização de dados de alto volume, e mantive pipelines Azure DevOps CI/CD.",
+    "highlights": [
+      "SuperApp de imóveis e investimentos",
+      "Carteira digital e rastreamento de ativos",
+      "CI/CD com Azure DevOps"
+    ]
+  },
+  "guria-shape": {
+    "description": "App fitness desenvolvido para ajudar usuárias a alcançarem seus objetivos de forma e saúde. App publicado na Play Store com funcionalidades de acompanhamento de treinos, nutrição e progresso.",
+    "highlights": [
+      "App publicado na Play Store",
+      "Acompanhamento de treinos e nutrição",
+      "Interface intuitiva e acessível"
+    ]
+  },
+  "app-fitness": {
+    "description": "Aplicativo completo de fitness com funcionalidades de treinamento, acompanhamento de exercícios, e gestão de rotinas de treino. Desenvolvido com foco em usabilidade e performance.",
+    "highlights": [
+      "App publicado na Play Store",
+      "Gestão completa de treinos",
+      "Interface otimizada para performance"
+    ]
+  },
+  "hot-buttered-club": {
+    "description": "App de e-commerce desenvolvido para iOS e Android, oferecendo experiência de compra premium com interface moderna e funcionalidades avançadas de navegação e checkout.",
+    "highlights": [
+      "App publicado na App Store e Play Store",
+      "Interface moderna e intuitiva",
+      "Experiência de compra otimizada"
+    ]
+  },
+  "hb-rep": {
+    "description": "Aplicativo de representação comercial desenvolvido para facilitar o trabalho de representantes, com gestão de pedidos, catálogo de produtos e acompanhamento de vendas.",
+    "highlights": [
+      "App publicado na Play Store",
+      "Gestão de representantes",
+      "Catálogo e pedidos integrados"
+    ]
+  },
+  "lojas-renner": {
+    "description": "Contribuí para o lançamento do app de e-commerce multilíngue para o mercado uruguaio. Implementei acessibilidade, internacionalização, consistência cross-platform de UI, e fluxos de varejo de alta performance.",
+    "highlights": [
+      "App multilíngue para mercado uruguaio",
+      "Acessibilidade implementada",
+      "Fluxos de alta performance"
+    ]
+  },
+  "barbearia-katana": {
+    "description": "App desenvolvido para barbearia com sistema de agendamento, gestão de clientes, e funcionalidades de fidelidade. Interface moderna e intuitiva para melhor experiência do usuário.",
+    "highlights": [
+      "Sistema de agendamento",
+      "Gestão de clientes",
+      "App publicado na Play Store"
+    ]
+  },
+  "imoveis-livre": {
+    "description": "Aplicativo imobiliário com funcionalidades de busca, visualização de imóveis, agendamento de visitas e contato com corretores. Interface otimizada para facilitar a busca de propriedades.",
+    "highlights": [
+      "Busca avançada de imóveis",
+      "Agendamento de visitas",
+      "App publicado na Play Store"
+    ]
+  },
+  "palavra-da-graca": {
+    "description": "App religioso desenvolvido para compartilhamento de conteúdo espiritual, com funcionalidades de leitura, áudio e vídeo. Interface acessível e otimizada para diferentes dispositivos.",
+    "highlights": [
+      "Conteúdo multimídia",
+      "Interface acessível",
+      "App publicado na Play Store"
+    ]
+  },
+  "guato-digital": {
+    "description": "Website desenvolvido para empresa de soluções digitais, com design moderno e responsivo. Implementação de interface otimizada para conversão e experiência do usuário.",
+    "highlights": [
+      "Design moderno e responsivo",
+      "Otimizado para conversão",
+      "Performance otimizada"
+    ]
+  },
+  "pamela-decoracao": {
+    "description": "Website para empresa de decoração e design de interiores, com galeria de projetos, portfólio visual e sistema de contato. Interface elegante e intuitiva.",
+    "highlights": [
+      "Galeria de projetos",
+      "Portfólio visual",
+      "Design elegante"
+    ]
+  },
+  "brdevs": {
+    "description": "Plataforma desenvolvida para comunidade de desenvolvedores brasileiros, com recursos de networking, compartilhamento de conhecimento e eventos.",
+    "highlights": [
+      "Plataforma comunitária",
+      "Networking e eventos",
+      "Deploy na Vercel"
+    ]
+  },
+  "sistema-feline": {
+    "description": "Sistema web desenvolvido para gestão e controle, com interface administrativa completa e funcionalidades de gerenciamento de dados.",
+    "highlights": [
+      "Sistema de gestão",
+      "Interface administrativa",
+      "Integração backend"
+    ]
+  }
+}
+
