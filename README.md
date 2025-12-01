@@ -87,7 +87,7 @@ O projeto utiliza um design system customizado com:
 
 ## 📝 Licença
 
-Este projeto é privado e propriedade de Jaqueline Gonzaga.
+Este projeto é propriedade de Jaqueline Gonzaga.
 
 
 
