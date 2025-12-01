@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-neutral-200 dark:border-dark-700;
+  }
+
+  body {
+    @apply bg-white dark:bg-dark-950 text-neutral-900 dark:text-neutral-100;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  /* Dark theme background with gradient */
+  body.dark,
+  .dark body {
+    background-image: linear-gradient(to bottom, #020617, #0f172a, #1e293b, #0f172a);
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-dark-950;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), 0 0 40px rgba(99, 102, 241, 0.1);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), 0 0 40px rgba(168, 85, 247, 0.1);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.1);
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-hero {
+    background: radial-gradient(
+        ellipse at top,
+        rgba(99, 102, 241, 0.1),
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at bottom,
+        rgba(168, 85, 247, 0.08),
+        transparent 50%
+      ),
+      linear-gradient(to bottom, #f8fafc, #ffffff, #f1f5f9);
+  }
+
+  .dark .bg-gradient-hero {
+    background: radial-gradient(
+        ellipse at top,
+        rgba(99, 102, 241, 0.15),
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at bottom,
+        rgba(168, 85, 247, 0.1),
+        transparent 50%
+      ),
+      linear-gradient(to bottom, #020617, #0f172a, #1e293b);
+  }
+
+  .bg-gradient-chat {
+    background: linear-gradient(
+      to bottom,
+      rgba(248, 250, 252, 0.9),
+      rgba(241, 245, 249, 0.95)
+    );
+  }
+
+  .dark .bg-gradient-chat {
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 23, 42, 0.8),
+      rgba(30, 41, 59, 0.9)
+    );
+  }
+
+  /* Text gradients */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
