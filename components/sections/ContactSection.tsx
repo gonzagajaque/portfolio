@@ -1,7 +1,10 @@
+'use client'
+
 import React from 'react'
 import { Container } from '../ui/Container'
 import { Section } from '../ui/Section'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const socialLinks = [
   {
@@ -43,18 +46,20 @@ const socialLinks = [
 ]
 
 export const ContactSection: React.FC = () => {
+  const { t } = useLanguage()
+  
   return (
-    <Section id="contact" ariaLabel="Contato">
+    <Section id="contact" ariaLabel={t('contact.title')}>
       <Container>
         <div className="max-w-4xl mx-auto">
           <div className="rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-6 md:p-8 lg:p-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-neutral-900 dark:text-white">
-              Contact
+              {t('contact.title')}
             </h2>
 
             <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-neutral-900 dark:text-white">Email</h3>
+              <h3 className="text-xl font-semibold mb-4 text-neutral-900 dark:text-white">{t('common.labels.email')}</h3>
               <a
                 href="mailto:jaquelinesgonzaga@gmail.com"
                 className="text-lg text-primary-600 dark:text-primary-400 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
@@ -64,7 +69,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-neutral-900 dark:text-white">Phone</h3>
+              <h3 className="text-xl font-semibold mb-4 text-neutral-900 dark:text-white">{t('common.labels.phone')}</h3>
               <a
                 href="tel:+5565992878328"
                 className="text-lg text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
@@ -74,7 +79,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-neutral-900 dark:text-white">Social</h3>
+              <h3 className="text-xl font-semibold mb-4 text-neutral-900 dark:text-white">{t('common.labels.social')}</h3>
               <div className="flex items-center gap-6">
                 {socialLinks.map((link) => (
                   <Link
@@ -83,7 +88,7 @@ export const ContactSection: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
-                    aria-label={`Visitar ${link.name} (abre em nova aba)`}
+                    aria-label={`${t('contact.visit')} ${link.name} (${t('common.buttons.openInNewTab')})`}
                   >
                     {link.icon}
                     <span className="sr-only">{link.name}</span>

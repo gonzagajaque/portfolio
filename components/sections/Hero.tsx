@@ -4,23 +4,25 @@ import { useState, FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { BriefcaseBusiness, Layers, PartyPopper, User, Mail } from 'lucide-react'
+import { BriefcaseBusiness, Layers, Download, User, Mail } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 // Base path for GitHub Pages - matches next.config.js
 // Next.js should handle basePath automatically, but with static export it may not work
 // So we include it explicitly to ensure it works on GitHub Pages
 const BASE_PATH = '/portfolio'
 
-const navigationButtons = [
-  { name: 'Projects', href: '/projects', color: '#2563eb', icon: BriefcaseBusiness },
-  { name: 'Skills', href: '/skills', color: '#3b82f6', icon: Layers },
-  { name: 'Fun', href: '/fun', color: '#6b21a8', icon: PartyPopper },
-  { name: 'About', href: '/about', color: '#1d4ed8', icon: User },
-  { name: 'Contact', href: '/contact', color: '#7e22ce', icon: Mail },
-]
-
 export const Hero: React.FC = () => {
+  const { t } = useLanguage()
   const [chatInput, setChatInput] = useState('')
+
+  const navigationButtons = [
+    { nameKey: 'common.nav.projects', href: '/projects', color: '#2563eb', icon: BriefcaseBusiness },
+    { nameKey: 'common.nav.skills', href: '/skills', color: '#3b82f6', icon: Layers },
+    { nameKey: 'common.nav.resume', href: '/resume', color: '#6b21a8', icon: Download },
+    { nameKey: 'common.nav.about', href: '/about', color: '#1d4ed8', icon: User },
+    { nameKey: 'common.nav.contact', href: '/contact', color: '#7e22ce', icon: Mail },
+  ]
 
   const handleChatSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -71,7 +73,7 @@ export const Hero: React.FC = () => {
           className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 mb-3 font-medium"
           variants={itemVariants}
         >
-          Hey, I&apos;m Jaqueline Gonzaga!
+          {t('hero.greeting')}
         </motion.p>
 
         <motion.h1
@@ -79,7 +81,7 @@ export const Hero: React.FC = () => {
           variants={itemVariants}
         >
           <span className="text-neutral-900 dark:text-white">
-            Portfolio
+            {t('hero.title')}
           </span>
         </motion.h1>
 
@@ -109,15 +111,15 @@ export const Hero: React.FC = () => {
               type="text"
               value={chatInput}
               onChange={(e) => setChatInput(e.target.value)}
-              placeholder="Ask me anything…"
+              placeholder={t('hero.chatPlaceholder')}
               className="w-full border-none bg-transparent text-base text-neutral-800 dark:text-neutral-100 placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:outline-none"
-              aria-label="Campo de entrada do chat"
+              aria-label={t('hero.chatInputLabel')}
             />
             <button
               type="submit"
               disabled={!chatInput.trim()}
               className="flex items-center justify-center rounded-full bg-primary-600 p-2.5 text-white transition-colors hover:bg-primary-700 disabled:opacity-70 dark:bg-primary-600 dark:hover:bg-primary-500"
-              aria-label="Enviar mensagem"
+              aria-label={t('hero.chatSubmit')}
             >
               <svg
                 className="w-5 h-5 text-white"
@@ -145,12 +147,12 @@ export const Hero: React.FC = () => {
             const Icon = button.icon
             return (
               <Link
-                key={button.name}
+                key={button.nameKey}
                 href={button.href}
                 className="cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 w-32 h-32 shadow-none backdrop-blur-lg hover:bg-neutral-200/30 dark:hover:bg-neutral-700/50 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 text-gray-700 dark:text-gray-200"
               >
                 <Icon size={24} strokeWidth={2} color={button.color} />
-                <span className="text-xs font-medium">{button.name}</span>
+                <span className="text-xs font-medium">{t(button.nameKey)}</span>
               </Link>
             )
           })}
