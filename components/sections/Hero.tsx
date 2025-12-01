@@ -4,11 +4,13 @@ import { useState, FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { BriefcaseBusiness, Layers, Download, User, Mail } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export const Hero: React.FC = () => {
   const { t } = useLanguage()
+  const router = useRouter()
   const [chatInput, setChatInput] = useState('')
   const [showResumeConfirm, setShowResumeConfirm] = useState(false)
   
@@ -22,9 +24,13 @@ export const Hero: React.FC = () => {
     { nameKey: 'common.nav.contact', href: '/contact', icon: Mail },
   ]
 
+
   const handleChatSubmit = (e: FormEvent) => {
     e.preventDefault()
-    setChatInput('')
+    const userMessage = chatInput.trim()
+    if (!userMessage) return
+    
+    router.push('/chat')
   }
 
   const handleResumeClick = (e: React.MouseEvent) => {
@@ -123,19 +129,22 @@ export const Hero: React.FC = () => {
           className="mb-4 flex items-center gap-3 max-w-lg mx-auto w-full"
           variants={itemVariants}
         >
-          <div className="flex items-center rounded-full border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 py-2.5 pr-2 pl-6 backdrop-blur-lg transition-all hover:border-neutral-300 dark:hover:border-neutral-500 w-full">
+          <div className="flex items-center rounded-full border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 py-2.5 pr-2 pl-6 backdrop-blur-lg transition-all hover:border-neutral-300 dark:hover:border-neutral-500 w-full cursor-pointer"
+            onClick={() => router.push('/chat')}
+          >
             <input
               type="text"
               value={chatInput}
               onChange={(e) => setChatInput(e.target.value)}
+              onFocus={() => router.push('/chat')}
               placeholder={t('hero.chatPlaceholder')}
-              className="w-full border-none bg-transparent text-base text-neutral-800 dark:text-neutral-100 placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:outline-none"
+              className="w-full border-none bg-transparent text-base text-neutral-800 dark:text-neutral-100 placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:outline-none cursor-pointer"
               aria-label={t('hero.chatInputLabel')}
+              readOnly
             />
             <button
               type="submit"
-              disabled={!chatInput.trim()}
-              className="flex items-center justify-center rounded-full bg-primary-500 p-2.5 text-white transition-colors hover:bg-primary-600 disabled:opacity-70 dark:bg-primary-600 dark:hover:bg-primary-500"
+              className="flex items-center justify-center rounded-full bg-primary-500 p-2.5 text-white transition-colors hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-500"
               aria-label={t('hero.chatSubmit')}
             >
               <svg
