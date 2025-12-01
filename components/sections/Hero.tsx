@@ -10,6 +10,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 export const Hero: React.FC = () => {
   const { t } = useLanguage()
   const [chatInput, setChatInput] = useState('')
+  const [showResumeConfirm, setShowResumeConfirm] = useState(false)
   
   const basePath = process.env.NODE_ENV === 'development' ? '' : '/portfolio'
 
@@ -24,6 +25,25 @@ export const Hero: React.FC = () => {
   const handleChatSubmit = (e: FormEvent) => {
     e.preventDefault()
     setChatInput('')
+  }
+
+  const handleResumeClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setShowResumeConfirm(true)
+  }
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a')
+    link.href = `${basePath}/curriculo_jaqueline_gonzaga.pdf`
+    link.download = 'curriculo_jaqueline_gonzaga.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    setShowResumeConfirm(false)
+  }
+
+  const handleCancelDownload = () => {
+    setShowResumeConfirm(false)
   }
 
   const containerVariants = {
@@ -142,6 +162,21 @@ export const Hero: React.FC = () => {
         >
           {navigationButtons.map((button) => {
             const Icon = button.icon
+            const isResume = button.nameKey === 'common.nav.resume'
+            
+            if (isResume) {
+              return (
+                <button
+                  key={button.nameKey}
+                  onClick={handleResumeClick}
+                  className="cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 w-32 h-32 shadow-none backdrop-blur-lg hover:bg-white/60 dark:hover:bg-neutral-700/50 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 text-gray-700 dark:text-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                >
+                  <Icon size={24} strokeWidth={2} className="text-primary-600 dark:text-primary-400" />
+                  <span className="text-xs font-medium">{t(button.nameKey)}</span>
+                </button>
+              )
+            }
+            
             return (
               <Link
                 key={button.nameKey}
@@ -155,6 +190,43 @@ export const Hero: React.FC = () => {
           })}
         </motion.div>
       </motion.div>
+
+      {/* Dialog de confirmação para download do currículo */}
+      {showResumeConfirm && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          onClick={handleCancelDownload}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-lg p-6 md:p-8 max-w-md w-full shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
+              {t('resume.downloadConfirm') || 'Baixar Currículo?'}
+            </h3>
+            <p className="text-base text-neutral-600 dark:text-neutral-300 mb-6">
+              {t('resume.downloadMessage') || 'Deseja baixar o currículo em PDF?'}
+            </p>
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={handleCancelDownload}
+                className="px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors text-neutral-700 dark:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+              >
+                {t('common.buttons.cancel') || 'Cancelar'}
+              </button>
+              <button
+                onClick={handleDownloadResume}
+                className="px-4 py-2 rounded-lg bg-primary-600 text-white hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+              >
+                {t('common.buttons.download') || 'Baixar'}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </section>
   )
 }
