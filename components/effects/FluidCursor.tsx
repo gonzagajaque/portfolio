@@ -53,7 +53,7 @@ const initFluidCursor = (canvas: HTMLCanvasElement): (() => void) | undefined =>
     SHADING: true,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r: 0.5, g: 0, b: 0 },
+    BACK_COLOR: { r: 0, g: 0, b: 0 },
     TRANSPARENT: true,
   }
 

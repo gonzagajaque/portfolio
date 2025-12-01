@@ -75,10 +75,26 @@ export function HSVtoRGB(h: number, s: number, v: number): { r: number; g: numbe
 }
 
 export function generateColor(): { r: number; g: number; b: number } {
-  let c = HSVtoRGB(Math.random(), 1.0, 1.0)
-  c.r *= 0.25
-  c.g *= 0.25
-  c.b *= 0.25
-  return c
+  const colors = [
+    { r: 0.145, g: 0.388, b: 0.922 },
+    { r: 0.231, g: 0.510, b: 0.965 },
+    { r: 0.114, g: 0.306, b: 0.847 },
+    { r: 0.420, g: 0.129, b: 0.659 },
+    { r: 0.494, g: 0.133, b: 0.808 },
+    { r: 0.345, g: 0.110, b: 0.529 },
+  ]
+  
+  const baseColor = colors[Math.floor(Math.random() * colors.length)]
+  
+  const variation = 0.1
+  const rVariation = (Math.random() - 0.5) * variation
+  const gVariation = (Math.random() - 0.5) * variation
+  const bVariation = (Math.random() - 0.5) * variation
+  
+  return {
+    r: Math.max(0, Math.min(1, baseColor.r + rVariation)),
+    g: Math.max(0, Math.min(1, baseColor.g + gVariation)),
+    b: Math.max(0, Math.min(1, baseColor.b + bVariation)),
+  }
 }
 
