@@ -8,6 +8,9 @@ export interface Project {
   period: string
   highlights: string[]
   href?: string
+  iosUrl?: string
+  androidUrl?: string
+  webUrl?: string
 }
 
 export interface Experience {
