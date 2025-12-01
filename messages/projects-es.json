@@ -155,6 +155,16 @@
       "Interfaz administrativa",
       "Integración backend"
     ]
+  },
+  "iklaim": {
+    "description": "Plataforma web desarrollada para reclamos de vuelos e indemnizaciones aéreas, permitiendo que los pasajeros reclamen sus derechos de forma simple y eficiente. Desarrollé la aplicación completa usando Next.js con internacionalización (i18n) para soportar múltiples mercados (Brasil, España, Francia, Estados Unidos), implementando backend en Node.js para procesamiento de reclamos, gestión de casos e integración con sistemas legales. La plataforma ofrece una interfaz intuitiva para registrar vuelos cancelados, retrasos, overbooking y problemas con equipaje, con seguimiento en tiempo real del estado de las indemnizaciones.",
+    "highlights": [
+      "Plataforma multilingüe para múltiples mercados",
+      "Sistema completo de gestión de reclamos",
+      "Backend Node.js para procesamiento de casos",
+      "Interfaz optimizada para conversión",
+      "Seguimiento en tiempo real de indemnizaciones"
+    ]
   }
 }
 

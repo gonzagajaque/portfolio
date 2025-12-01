@@ -155,6 +155,16 @@
       "Administrative interface",
       "Backend integration"
     ]
+  },
+  "iklaim": {
+    "description": "Web platform developed for flight complaints and airline compensation, allowing passengers to claim their rights simply and efficiently. I developed the complete application using Next.js with internationalization (i18n) to support multiple markets (Brazil, Spain, France, United States), implementing Node.js backend for complaint processing, case management, and integration with legal systems. The platform offers an intuitive interface for registering canceled flights, delays, overbooking, and baggage issues, with real-time tracking of compensation status.",
+    "highlights": [
+      "Multilingual platform for multiple markets",
+      "Complete complaint management system",
+      "Node.js backend for case processing",
+      "Conversion-optimized interface",
+      "Real-time compensation tracking"
+    ]
   }
 }
 

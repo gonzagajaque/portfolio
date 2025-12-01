@@ -127,6 +127,34 @@ export const projects: Project[] = [
     ],
     webUrl: 'https://www.sistema-feline.com.br/',
   },
+  // 2023 - 2024
+  {
+    id: 'iklaim',
+    title: 'iKlaim',
+    company: 'iKlaim',
+    description:
+      'Plataforma web desenvolvida para reclamações de voos e indenizações aéreas, permitindo que passageiros reivindiquem seus direitos de forma simples e eficiente. Desenvolvi a aplicação completa usando Next.js com internacionalização (i18n) para suportar múltiplos mercados (Brasil, Espanha, França, Estados Unidos), implementando backend em Node.js para processamento de reclamações, gestão de casos e integração com sistemas legais. A plataforma oferece interface intuitiva para registro de voos cancelados, atrasados, overbooking e problemas com bagagem, com acompanhamento em tempo real do status das indenizações.',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'React',
+      'Node.js',
+      'i18n',
+      'Internationalization',
+      'Backend API',
+      'Case Management',
+    ],
+    domain: 'Legal Tech',
+    period: '2023 - 2024',
+    highlights: [
+      'Plataforma multilíngue para múltiplos mercados',
+      'Sistema completo de gestão de reclamações',
+      'Backend Node.js para processamento de casos',
+      'Interface otimizada para conversão',
+      'Acompanhamento em tempo real de indenizações',
+    ],
+    webUrl: 'https://iklaim.com/br',
+  },
   // 2022 - 2023
   {
     id: 'maistodos',
