@@ -6,12 +6,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BriefcaseBusiness, Layers, PartyPopper, User, Mail } from 'lucide-react'
 
+// Base path for GitHub Pages - matches next.config.js
+// Next.js should handle basePath automatically, but with static export it may not work
+// So we include it explicitly to ensure it works on GitHub Pages
+const BASE_PATH = '/portfolio'
+
 const navigationButtons = [
-  { name: 'Projects', href: '/projects', color: '#3E9858', icon: BriefcaseBusiness },
-  { name: 'Skills', href: '/skills', color: '#856ED9', icon: Layers },
-  { name: 'Fun', href: '/fun', color: '#B95F9D', icon: PartyPopper },
-  { name: 'About', href: '/about', color: '#0171E3', icon: User },
-  { name: 'Contact', href: '/contact', color: '#E67E22', icon: Mail },
+  { name: 'Projects', href: '/projects', color: '#2563eb', icon: BriefcaseBusiness },
+  { name: 'Skills', href: '/skills', color: '#3b82f6', icon: Layers },
+  { name: 'Fun', href: '/fun', color: '#6b21a8', icon: PartyPopper },
+  { name: 'About', href: '/about', color: '#1d4ed8', icon: User },
+  { name: 'Contact', href: '/contact', color: '#7e22ce', icon: Mail },
 ]
 
 export const Hero: React.FC = () => {
@@ -84,7 +89,7 @@ export const Hero: React.FC = () => {
         >
           <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-neutral-200 dark:border-neutral-700 shadow-2xl dark:shadow-primary-500/20 overflow-hidden">
             <Image
-              src="/styles/me.png"
+              src={`${BASE_PATH}/styles/me.png`}
               alt="gonzagajaque"
               width={192}
               height={192}
@@ -111,7 +116,7 @@ export const Hero: React.FC = () => {
             <button
               type="submit"
               disabled={!chatInput.trim()}
-              className="flex items-center justify-center rounded-full bg-[#0171E3] p-2.5 text-white transition-colors hover:bg-blue-600 disabled:opacity-70 dark:bg-[#0171E3]"
+              className="flex items-center justify-center rounded-full bg-primary-600 p-2.5 text-white transition-colors hover:bg-primary-700 disabled:opacity-70 dark:bg-primary-600 dark:hover:bg-primary-500"
               aria-label="Enviar mensagem"
             >
               <svg
