@@ -24,7 +24,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <article className="group h-full">
       <Link
         href={`/projects/${project.id}`}
-        className="h-full rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-6 md:p-8 transition-all hover:bg-neutral-200/30 dark:hover:bg-neutral-700/50 hover:border-neutral-300 dark:hover:border-neutral-500 cursor-pointer flex flex-col"
+        className="h-full rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-4 sm:p-6 md:p-8 transition-all hover:bg-neutral-200/30 dark:hover:bg-neutral-700/50 hover:border-neutral-300 dark:hover:border-neutral-500 cursor-pointer flex flex-col"
       >
         <div className="flex-1 flex flex-col">
           <div className="flex items-start justify-between mb-4">
@@ -50,7 +50,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   className="text-neutral-900 dark:text-neutral-100 hover:opacity-80 transition-opacity"
                   aria-label={t('projects.openAppStore')}
                 >
-                  <AppleIcon size={28} />
+                  <AppleIcon size={20} className="sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </a>
               )}
               {project.androidUrl && (
@@ -61,7 +61,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors"
                   aria-label={t('projects.openPlayStore')}
                 >
-                  <AndroidIcon size={28} />
+                  <AndroidIcon size={20} className="sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </a>
               )}
               {project.webUrl && (
@@ -72,7 +72,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
                   aria-label={t('projects.openWebsite')}
                 >
-                  <Globe size={28} />
+                  <Globe size={20} className="sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </a>
               )}
               {project.href && !project.iosUrl && !project.androidUrl && !project.webUrl && (
@@ -83,7 +83,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
                   aria-label={t('projects.viewProject')}
                 >
-                  <Globe size={28} />
+                  <Globe size={20} className="sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </a>
               )}
             </div>

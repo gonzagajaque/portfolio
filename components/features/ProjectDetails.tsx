@@ -24,14 +24,14 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
     <Section id="project-details" ariaLabel={t('projects.about')}>
       <Container>
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-6 md:p-8 lg:p-10">
-            <div className="mb-8">
-              <div className="flex items-start justify-between mb-4">
+          <div className="rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-4 sm:p-6 md:p-8 lg:p-10">
+            <div className="mb-6 sm:mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-4">
                 <div className="flex-1">
-                  <h1 className="text-3xl md:text-4xl font-bold mb-3 text-neutral-900 dark:text-white">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-neutral-900 dark:text-white">
                     {translatedProject.title}
                   </h1>
-                  <div className="flex items-center gap-2 text-lg text-neutral-600 dark:text-neutral-300 mb-4">
+                  <div className="flex items-center gap-2 text-base sm:text-lg text-neutral-600 dark:text-neutral-300 mb-4">
                     <Building2 size={18} />
                     <span>{translatedProject.company}</span>
                   </div>
@@ -49,18 +49,18 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
               </div>
             </div>
 
-            <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
-              <h2 className="text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
+            <div className="prose prose-lg dark:prose-invert max-w-none mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
                 {t('projects.about')}
               </h2>
-              <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+              <p className="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
                 {translatedProject.description}
               </p>
             </div>
 
             {translatedProject.highlights && translatedProject.highlights.length > 0 && (
-              <div className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
                   {t('projects.highlights')}
                 </h2>
                 <ul className="space-y-2">
@@ -77,8 +77,8 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
               </div>
             )}
 
-            <div className="mb-8">
-              <h2 className="text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
+            <div className="mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
                 {t('projects.technologies')}
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -91,17 +91,17 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
             </div>
 
             {(translatedProject.iosUrl || translatedProject.androidUrl || translatedProject.webUrl || translatedProject.href) && (
-              <div className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
                   {t('projects.links')}
                 </h2>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-2 sm:gap-4">
                   {translatedProject.iosUrl && (
                     <a
                       href={translatedProject.iosUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 text-sm sm:text-base"
                       aria-label={t('projects.openAppStore')}
                     >
                       <AppleIcon size={20} />
@@ -114,7 +114,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                       href={translatedProject.androidUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 text-sm sm:text-base"
                       aria-label={t('projects.openPlayStore')}
                     >
                       <AndroidIcon size={20} />
@@ -127,7 +127,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                       href={translatedProject.webUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 text-sm sm:text-base"
                       aria-label={t('projects.openWebsite')}
                     >
                       <Globe size={20} />
@@ -140,7 +140,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
                       href={translatedProject.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                      className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white/70 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-700 transition-colors text-primary-600 dark:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 text-sm sm:text-base"
                       aria-label={t('projects.viewProject')}
                     >
                       <Globe size={20} />
