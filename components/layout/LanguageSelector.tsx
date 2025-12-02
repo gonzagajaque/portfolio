@@ -29,7 +29,7 @@ export const LanguageSelector: React.FC = () => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 rounded-full border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 backdrop-blur-lg flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-white/60 dark:hover:bg-neutral-700/50 transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#EBEBF0] dark:focus-visible:ring-offset-dark-950 min-w-[56px] min-h-[56px]"
+        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 backdrop-blur-lg flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-white/60 dark:hover:bg-neutral-700/50 transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#EBEBF0] dark:focus-visible:ring-offset-dark-950 min-w-[48px] min-h-[48px] sm:min-w-[56px] sm:min-h-[56px]"
         aria-label="Select language"
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -40,7 +40,7 @@ export const LanguageSelector: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-40 rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-lg backdrop-blur-lg z-50">
+        <div className="absolute right-0 mt-2 w-36 sm:w-40 max-w-[calc(100vw-1.5rem)] rounded-lg border border-neutral-200 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-lg backdrop-blur-lg z-50">
           <div className="py-1">
             {locales.map((loc) => (
               <button
