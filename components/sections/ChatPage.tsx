@@ -218,8 +218,8 @@ INSTRUCTIONS:
   return (
     <Section id="chat" ariaLabel={t('hero.chatTitle') || 'Chat'}>
       <Container>
-        <div className="max-w-4xl mx-auto py-4 md:py-8 px-4">
-          <div className="rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-4 md:p-6 lg:p-8 max-h-[85vh] md:max-h-[90vh] flex flex-col">
+        <div className="max-w-4xl mx-auto py-4 sm:py-6 md:py-8 px-4">
+          <div className="rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-3 sm:p-4 md:p-6 lg:p-8 max-h-[85vh] md:max-h-[90vh] flex flex-col">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-4 md:mb-6">
               <div className="min-w-0 flex-1">
@@ -239,7 +239,7 @@ INSTRUCTIONS:
             </div>
 
             {/* Messages area */}
-            <div className="flex-1 overflow-y-auto mb-3 md:mb-4 space-y-3 md:space-y-4 pr-1 md:pr-2 min-h-0">
+            <div className="flex-1 overflow-y-auto mb-2 sm:mb-3 md:mb-4 space-y-2 sm:space-y-3 md:space-y-4 pr-1 md:pr-2 min-h-0">
               <AnimatePresence>
                 {chatMessages.map((message) => (
                   <motion.div
