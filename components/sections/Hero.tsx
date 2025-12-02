@@ -78,7 +78,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 pt-16 pb-12 overflow-hidden z-[2]"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 pt-20 sm:pt-16 pb-12 overflow-hidden z-[2]"
       style={{ background: 'transparent' }}
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -112,7 +112,7 @@ export const Hero: React.FC = () => {
           className="mb-8 flex justify-center"
           variants={itemVariants}
         >
-          <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-neutral-200 dark:border-neutral-700 shadow-2xl dark:shadow-primary-500/20 overflow-hidden">
+          <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full border-4 border-neutral-200 dark:border-neutral-700 shadow-2xl dark:shadow-primary-500/20 overflow-hidden">
             <Image
               src={`${basePath}/styles/me.png`}
               alt="gonzagajaque"
@@ -166,7 +166,7 @@ export const Hero: React.FC = () => {
         </motion.form>
 
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-2 w-full max-w-4xl mx-auto"
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 w-full max-w-4xl mx-auto"
           variants={itemVariants}
         >
           {navigationButtons.map((button) => {
@@ -178,10 +178,10 @@ export const Hero: React.FC = () => {
                 <button
                   key={button.nameKey}
                   onClick={handleResumeClick}
-                  className="cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 w-32 h-32 shadow-none backdrop-blur-lg hover:bg-white/60 dark:hover:bg-neutral-700/50 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 text-gray-700 dark:text-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+                  className="cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 shadow-none backdrop-blur-lg hover:bg-white/60 dark:hover:bg-neutral-700/50 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 text-gray-700 dark:text-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                 >
-                  <Icon size={24} strokeWidth={2} className="text-primary-600 dark:text-primary-400" />
-                  <span className="text-xs font-medium">{t(button.nameKey)}</span>
+                  <Icon size={20} strokeWidth={2} className="text-primary-600 dark:text-primary-400 sm:w-6 sm:h-6" />
+                  <span className="text-[10px] sm:text-xs font-medium">{t(button.nameKey)}</span>
                 </button>
               )
             }
@@ -190,7 +190,7 @@ export const Hero: React.FC = () => {
               <Link
                 key={button.nameKey}
                 href={button.href}
-                className="cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 w-32 h-32 shadow-none backdrop-blur-lg hover:bg-white/60 dark:hover:bg-neutral-700/50 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 text-gray-700 dark:text-gray-200"
+                className="cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-600 bg-white/50 dark:bg-neutral-800/50 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 shadow-none backdrop-blur-lg hover:bg-white/60 dark:hover:bg-neutral-700/50 active:scale-95 transition-all flex flex-col items-center justify-center gap-1 text-gray-700 dark:text-gray-200"
               >
                 <Icon size={24} strokeWidth={2} className="text-primary-600 dark:text-primary-400" />
                 <span className="text-xs font-medium">{t(button.nameKey)}</span>
