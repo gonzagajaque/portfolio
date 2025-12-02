@@ -21,7 +21,7 @@ export const ProjectsSection: React.FC = () => {
             {t('projects.title')}
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 items-stretch">
             {projects.map((project) => {
               const translatedProject = getTranslatedProject(project)
               return <ProjectCard key={project.id} project={translatedProject} />

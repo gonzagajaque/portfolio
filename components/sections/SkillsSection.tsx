@@ -22,9 +22,9 @@ export const SkillsSection: React.FC = () => {
             {skills.map((category) => (
               <article
                 key={category.id}
-                className="rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-6 md:p-8 transition-all hover:bg-neutral-200/30 dark:hover:bg-neutral-700/50 hover:border-neutral-300 dark:hover:border-neutral-500 flex flex-col"
+                className="rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white/30 dark:bg-neutral-800/50 backdrop-blur-lg p-4 sm:p-6 md:p-8 transition-all hover:bg-neutral-200/30 dark:hover:bg-neutral-700/50 hover:border-neutral-300 dark:hover:border-neutral-500 flex flex-col"
               >
-                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-neutral-900 dark:text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-neutral-900 dark:text-white">
                   {category.name}
                 </h3>
                 <div className="flex flex-wrap gap-2 flex-1">
