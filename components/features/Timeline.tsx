@@ -24,9 +24,9 @@ export const Timeline: React.FC = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-neutral-200 dark:bg-dark-700 transform md:-translate-x-1/2" />
+          <div className="absolute left-4 sm:left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-neutral-200 dark:bg-dark-700 transform md:-translate-x-1/2" />
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {experiences.map((experience, index) => (
               <TimelineItem
                 key={experience.id}

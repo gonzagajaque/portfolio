@@ -15,10 +15,10 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ experience, position
         position === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
     >
-      <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary-600 dark:bg-primary-400 rounded-full border-4 border-white dark:border-dark-900 transform md:-translate-x-1/2 z-10" />
+      <div className="absolute left-4 sm:left-6 md:left-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-primary-600 dark:bg-primary-400 rounded-full border-4 border-white dark:border-dark-900 transform md:-translate-x-1/2 z-10" />
 
       <div
-        className={`ml-12 md:ml-0 md:w-1/2 ${
+        className={`ml-10 sm:ml-12 md:ml-0 md:w-1/2 ${
           position === 'left' ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
         }`}
       >
