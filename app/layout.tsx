@@ -44,12 +44,21 @@ export const metadata: Metadata = {
     description:
       'Senior Mobile Developer with 6+ years of experience in React Native and accessibility.',
     siteName: 'Jaqueline Gonzaga Portfolio',
+    images: [
+      {
+        url: 'https://jaquelinegonzaga.dev/portfolio/styles/me.png',
+        width: 192,
+        height: 192,
+        alt: 'Jaqueline Gonzaga - Senior Mobile Developer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Jaqueline Gonzaga - Senior Mobile Developer & Accessibility Specialist',
     description:
       'Senior Mobile Developer with 6+ years of experience in React Native and accessibility.',
+    images: ['https://jaquelinegonzaga.dev/portfolio/styles/me.png'],
   },
   robots: {
     index: true,
